@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"></link>
+<link rel="icon" href="/favicon.png" type="image/svg+xml"></link>
 
 export const metadata: Metadata = {
   title: "Móveis Planejados | Móveis sob medida",
