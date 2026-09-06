@@ -12,14 +12,21 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-<link rel="icon" href="/favicon.png" type="image/svg+xml"></link>
-
 export const metadata: Metadata = {
   title: "Móveis Planejados | Móveis sob medida",
   description: "Projetos personalizados em móveis planejados com design premium, visualização 3D e instalação especializada.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+  },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html
       lang="pt-BR"
