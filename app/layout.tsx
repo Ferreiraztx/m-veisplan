@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "Projetos personalizados em móveis planejados com design premium, visualização 3D e instalação especializada.",
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png" },
     ],
   },
 };
