@@ -206,15 +206,15 @@ export default function Home() {
 
   return (
     <div ref={containerRef} className="min-h-screen bg-neutral-950 text-white selection:bg-emerald-500 selection:text-black">
-      <header className="fixed left-0 top-0 z-50 flex w-full items-center justify-between border-b border-white/10 bg-neutral-950/80 px-6 py-4 backdrop-blur-md">
+      <header className="fixed left-0 top-0 z-50 flex w-full items-center justify-between border-b border-white/10 bg-neutral-950/80 px-4 py-4 backdrop-blur-md sm:px-6">
         <div className="flex items-center gap-2">
-          <span className="text-2xl font-black tracking-[0.25em] text-emerald-400">MÓVEIS</span>
-          <span className="-mt-1 block text-[10px] tracking-[0.45em] text-neutral-400">PLANEJADOS</span>
+          <span className="text-base font-black tracking-[0.18em] text-emerald-400 sm:text-2xl sm:tracking-[0.25em]">MÓVEIS</span>
+          <span className="-mt-1 block text-[7px] tracking-[0.2em] text-neutral-400 sm:text-[10px] sm:tracking-[0.45em]">PLANEJADOS</span>
         </div>
 
         <a
           href="#simulador"
-          className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-5 py-2.5 text-xs font-bold text-neutral-950 shadow-lg shadow-emerald-500/20 transition hover:bg-emerald-400"
+          className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-3 py-2 text-[10px] font-bold text-neutral-950 shadow-lg shadow-emerald-500/20 transition hover:bg-emerald-400 sm:px-5 sm:py-2.5 sm:text-xs"
         >
           <Calculator size={14} /> Pré-Orçamento Rápido
         </a>
@@ -234,23 +234,23 @@ export default function Home() {
 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.22),_transparent_40%),linear-gradient(to_bottom,_rgba(0,0,0,0.38),_rgba(0,0,0,0.82))]" />
 
-        <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-950/80 px-4 py-1.5 text-xs font-bold tracking-[0.25em] text-emerald-400 backdrop-blur-md">
+        <div className="relative z-10 mx-auto w-full max-w-5xl px-4 text-center sm:px-6">
+          <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-950/80 px-3 py-1.5 text-[9px] font-bold tracking-[0.18em] text-emerald-400 backdrop-blur-md sm:px-4 sm:text-xs sm:tracking-[0.25em]">
             <Sparkles size={14} /> DESIGN AUTORAL & SOB MEDIDA
           </span>
 
-          <h1 className="mt-6 text-4xl font-black leading-tight tracking-tight text-white md:text-7xl">
+          <h1 className="mt-6 text-[clamp(2.4rem,7vw,6rem)] font-black leading-[0.92] tracking-[-0.04em] text-white">
             Móveis planejados que elevam cada espaço da sua casa.
           </h1>
 
-          <p className="mx-auto mt-5 max-w-2xl text-sm font-light text-neutral-300 md:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl text-sm font-light text-neutral-300 sm:text-lg">
             Soluções em marcenaria premium, projeto 3D personalizado e acabamento refinado para cozinhas, closets, suítes e home offices.
           </p>
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-8 flex w-full flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center">
             <a
               href="#simulador"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-500 px-8 py-4 font-bold text-neutral-950 shadow-xl shadow-emerald-500/20 transition hover:bg-emerald-400"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-500 px-6 py-4 text-sm font-bold text-neutral-950 shadow-xl shadow-emerald-500/20 transition hover:bg-emerald-400 sm:w-auto sm:px-8"
             >
               <Calculator size={18} /> Simular Pré-Orçamento
             </a>
@@ -258,7 +258,7 @@ export default function Home() {
               href="https://wa.me/5555996721400"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-xl border border-neutral-700 bg-neutral-900/80 px-8 py-4 font-bold text-white transition hover:bg-neutral-800"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-neutral-700 bg-neutral-900/80 px-6 py-4 text-sm font-bold text-white transition hover:bg-neutral-800 sm:w-auto sm:px-8"
             >
               <MessageSquare size={18} className="text-emerald-400" /> WhatsApp Direto
             </a>
@@ -331,36 +331,36 @@ export default function Home() {
         {PROJECTS.map((project, idx) => (
           <div
             key={idx}
-            className="project-slide absolute inset-0 flex h-full w-full items-center justify-center bg-neutral-950 p-6 md:p-12"
+            className="project-slide absolute inset-0 flex h-full w-full items-center justify-center bg-neutral-950 p-3 sm:p-6 md:p-12"
             style={{ zIndex: idx + 1 }}
           >
-            <div className="relative grid w-full max-w-6xl overflow-hidden rounded-[2.5rem] border border-neutral-800 bg-neutral-900/90 p-8 shadow-2xl backdrop-blur-xl transition hover:border-emerald-500/30 lg:grid-cols-12 lg:gap-8 lg:p-12">
+            <div className="relative grid w-full max-w-6xl grid-cols-1 overflow-hidden rounded-[2rem] border border-neutral-800 bg-neutral-900/90 p-4 shadow-2xl backdrop-blur-xl transition hover:border-emerald-500/30 sm:rounded-[2.5rem] sm:p-6 lg:grid-cols-12 lg:gap-8 lg:p-12">
               <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-emerald-500/10 blur-3xl" />
 
-              <div className="z-10 space-y-6 lg:col-span-5">
+              <div className="z-10 space-y-5 lg:col-span-5 lg:space-y-6">
                 <div className="flex items-center gap-3">
-                  <span className="rounded-full border border-emerald-500/30 bg-emerald-950/60 px-3.5 py-1.5 text-xs font-bold tracking-[0.2em] text-emerald-400 uppercase">
+                  <span className="rounded-full border border-emerald-500/30 bg-emerald-950/60 px-2.5 py-1.5 text-[10px] font-bold tracking-[0.16em] text-emerald-400 uppercase sm:px-3.5 sm:text-xs sm:tracking-[0.2em]">
                     {project.tag}
                   </span>
                 </div>
 
-                <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-white md:text-5xl">{project.title}</h2>
+                <h2 className="text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-3xl md:text-5xl">{project.title}</h2>
                 <p className="text-sm leading-relaxed text-neutral-300 md:text-base">{project.desc}</p>
 
                 <div className="flex flex-wrap gap-2 pt-2">
                   {project.specs.map((spec, i) => (
-                    <span key={i} className="rounded-lg border border-neutral-800 bg-neutral-950/80 px-3 py-1.5 text-[11px] font-semibold text-neutral-300">
+                    <span key={i} className="rounded-lg border border-neutral-800 bg-neutral-950/80 px-3 py-1.5 text-[10px] font-semibold text-neutral-300 sm:text-[11px]">
                       • {spec}
                     </span>
                   ))}
                 </div>
 
-                <div className="pt-4">
+                <div className="pt-2 sm:pt-4">
                   <a
                     href={generateWhatsappUrl()}
                     target="_blank"
                     rel="noreferrer"
-                    className="group/btn inline-flex items-center gap-3 rounded-xl bg-emerald-500 px-7 py-3.5 text-sm font-bold text-neutral-950 shadow-lg shadow-emerald-500/20 transition hover:bg-emerald-400"
+                    className="group/btn inline-flex w-full items-center justify-center gap-3 rounded-xl bg-emerald-500 px-5 py-3.5 text-sm font-bold text-neutral-950 shadow-lg shadow-emerald-500/20 transition hover:bg-emerald-400 sm:w-auto sm:justify-start"
                   >
                     Solicitar projeto similar
                     <ArrowRight size={16} className="transition-transform group-hover/btn:translate-x-1" />
@@ -368,7 +368,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="relative z-10 mt-8 h-[320px] overflow-hidden rounded-2xl border border-neutral-800 shadow-2xl lg:col-span-7 lg:mt-0 lg:h-[480px]">
+              <div className="relative z-10 mt-6 h-[240px] overflow-hidden rounded-2xl border border-neutral-800 shadow-2xl sm:h-[280px] lg:col-span-7 lg:mt-0 lg:h-[480px]">
                 <img
                   src={project.img}
                   alt={project.title}
