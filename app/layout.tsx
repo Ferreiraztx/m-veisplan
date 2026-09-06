@@ -14,10 +14,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Móveis Planejados | Móveis sob medida",
-  description: "Projetos personalizados em móveis planejados com design premium, visualização 3D e instalação especializada.",
+  description:
+    "Projetos personalizados em móveis planejados com design premium, visualização 3D e instalação especializada.",
   icons: {
     icon: [
-      { url: "/favicon.png", type: "image/png" },
+      {
+        url: "/icon.png",
+        type: "image/png",
+      },
     ],
   },
 };
